@@ -1,9 +1,16 @@
-server:
-  port: 8090
-
 spring:
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    username: root
-    password: 553504
-    url: jdbc:mysql://localhost:3306/wiki?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    druid:
+      url: jdbc:mysql://localhost:3306/wiki?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 553504
+#配置mybatis所有Mapper.xml所在的路径
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml
+server:
+  port: 8070
+
+#打印所有的sql日志：sql，参数，结果
+#logging:
+#  level: trace
