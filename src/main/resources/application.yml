@@ -14,3 +14,8 @@ server:
 #打印所有的sql日志：sql，参数，结果
 #logging:
 #  level: trace
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

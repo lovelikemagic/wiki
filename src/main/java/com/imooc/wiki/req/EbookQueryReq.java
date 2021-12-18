@@ -1,11 +1,13 @@
 package com.imooc.wiki.req;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * 描述：ToDo
  */
-public class EbookReq {
+public class EbookQueryReq extends PageReq{
     private Long id;
-
+//    @NotNull(message = "【名字】不能为空")
     private String name;
 
     public Long getId() {
